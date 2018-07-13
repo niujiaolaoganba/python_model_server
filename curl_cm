@@ -1,0 +1,26 @@
+
+curl http://127.0.0.1:8888/finup
+
+xgb
+curl   -F  'files=@./data/test.yingxiao__2018042716.json' "http://127.0.0.1:8888/finup?model=yingxiao_xgboost__2018052216&format=pd" >ret__1000000_CSV2.csv
+
+
+tuijian
+curl  -F  'files=@./data/test.ff_tj_2018061916.json' "http://127.0.0.1:8888/finup?model=ff_tj_2018061916&format=pd" >ret__1000000_CSV2.csv
+
+
+curl  -F  'files=@./data/test.ff_tj_2018061916.json' "http://127.0.0.1:8888/finup?model=ff_tjjk_2018071212&format=pd"
+
+
+
+curl   -F  'files=@/data/app/finup_model__20180608140243/data/test.tuijian__2018051718.json' "http://127.0.0.1:8888/finup?model=ff_tj_2018061916&format=pd" >ret__1000000_CSV2.csv
+
+
+tf
+curl   -F  'files=@./data/test.toufang__2018060119.json' "http://127.0.0.1:8888/finup?model=ff_tf_2018070417&format=pd" >ret__1000000_CSV2.csv
+
+curl   -F  'files=@/data/app/finup_model__20180608140243/data/test.toufang__2018060119.json' "http://127.0.0.1:8888/finup?model=ff_tf_2018070417&format=pd" >ret__1000000_CSV2.csv
+
+
+curl   -F  'files=@./data/test.toufang__2018060119.json' "http://127.0.0.1:9999/finup?model=ff_tf_2018062714&format=pd" >ret__1000000_CSV2.csv
+

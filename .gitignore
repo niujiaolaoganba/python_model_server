@@ -1,0 +1,12 @@
+
+#notebook
+*.ipynb_checkpoints/
+
+#python
+*.pc[cod]
+*.so
+*.egg
+*.egg-info
+*__pycache__/
+*.idea/
+

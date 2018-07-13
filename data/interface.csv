@@ -1,0 +1,12 @@
+0|1|2|3|4|5|6|7|8|9|10|11|12|13|14
+Time|DeviceID|性别|年龄|消费水平|婚姻|父母|白领|车|城市线级|城市|行为异常|机型|品牌|价格
+numpy.object|numpy.object|numpy.object|numpy.object|numpy.object|numpy.object|numpy.object|numpy.object|numpy.object|numpy.object|numpy.object|numpy.object|numpy.object|numpy.object|numpy.float32
+1|1|1|1|1|1|1|1|1|1|1|1|0|1|1
+20180424|eb994c456276c5ea3c2ebe1cf9f2c80c|男|25-34岁|高|否|否|是|是|一线城市|纽约|否|IPhoneX|Apple|$999
+||||||||||||||
+||||||||||||||
+0|1|2||||||||||||
+Time|DeviceID|Score||||||||||||
+numpy.object|numpy.object|numpy.object||||||||||||
+1|1|1||||||||||||
+20180424|eb994c456276c5ea3c2ebe1cf9f2c80c|0.9959595||||||||||||

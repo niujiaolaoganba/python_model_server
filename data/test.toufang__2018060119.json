@@ -1,0 +1,32 @@
+[{
+  "modelCode": {
+    "liebao_toufang": "T_1_8_005_S_B_180403"
+  },
+  "sessionId": "6547602739747638764",
+  "tags": {
+    "loan-jiaming.2017122719.probability(0-0)": "0.05786718062194407",
+    "getuirisk.white.2018041718.score": "0.503",
+    "loan-jiaming.2017122719.probability(1-0)": "0.9421328193780559",
+    "show_total": 3,
+    "city": "济南",
+    "weekday": 1,
+    "getui.2018032802.probability(1)": "0.523265573816567",
+    "holiday": 0,
+    "getui.2018032802.probability(0)": "0.476734426183433",
+    "ad_click": 0,
+    "hour": 19,
+    "province": "山东省",
+    "bannertype": "116146",
+    "getui.white.2018022816.probability(1-0)": "0.9565328672898509",
+    "ctime": "2018-04-23 19:22:40",
+    "getui.2018022816.probability(1-0)": "0.9554919439002796",
+    "getui.2018022816.probability(0-0)": "0.04450805609972042",
+    "getui.2018020715.probability(0)": "0.6049084507137898",
+    "getui.2018020715.probability(1)": "0.39509154928621015",
+    "ff_click": 0,
+    "getui.white.2018022816.probability(0-0)": "0.043467132710149126"
+  },
+  "userEncrypt": "685d401ba6851084d36cf764a0565a85",
+  "userFlag": "861379033929825",
+  "userType": "IMEI"
+}]

@@ -1,0 +1,52 @@
+1、接口地址 
+imei
+https://api-zx.getui.com/fp/credit/imei/fanpu_tag01_query
+idfa
+https://api-zx.getui.com/fp/credit/idfa/fanpu_tag01_query
+2、入参 
+    header
+        {
+            "Content-Type":"application/json",
+            "access-token", accessToken
+        }
+
+    body
+        encryptDeviceNum= "c60766f5696c05505e50aca7592e5991"
+        // imei 传入 32位 md5 hex lowercase 加密后的 设备号
+        {"value": "c60766f5696c05505e50aca7592e5991"}
+
+        // idfa 传入 非加密的设备id
+        {"value": "35EDB23A-8B36-49E8-B34F-30AC638A4F66"}
+
+3、返回值
+
+    查询到结果正确返回值,其他情况参考接口文档
+    {
+        "data":{
+            "catagory":"getui-mix-model",
+            "result":{
+                "{"category":"getui","version":"2018020715"}":"{"probability(0)":"0.8369780504488513","probability(1)":"0.16302194955114868"}",
+                "{"category":"getui","version":"2018032802"}":"{"probability(0)":"0.9518944224385931","probability(1)":"0.04810557756140688"}",
+                "{"category":"getui","version":"2018022816"}":"{"probability(0.0)":"0.38360874945907175","probability(1.0)":"0.6163912505409282"}",
+                "{"category":"loan-jiaming","version":"2017122719"}":"{"probability(0.0)":"0.3522398285998537","probability(1.0)":"0.6477601714001463"}"
+            },
+            "modelVersion":"2017122215"
+        },
+        "status":0
+    }
+
+    {
+    "data":{
+        "catagory":"getui-mix-model",
+        "result":{
+            "{"category":"getui","version":"2018020715"}":"{"probability(0)":"0.6564595458837577","probability(1)":"0.34354045411624234"}",
+            "{"category":"getui","version":"2018032802"}":"{"probability(0)":"0.9397808131828219","probability(1)":"0.06021918681717808"}",
+            "{"category":"getui","version":"2018022816"}":"{"probability(0.0)":"0.5654880612874007","probability(1.0)":"0.43451193871259924"}",
+            "{"category":"loan-jiaming","version":"2017122719"}":"{"probability(0.0)":"0.6560559251457467","probability(1.0)":"0.3439440748542532"}"
+        },
+        "modelVersion":"2017122215"
+    },
+    "status":0
+}
+
+

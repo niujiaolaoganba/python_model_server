@@ -1,0 +1,34 @@
+<一> 模型使用文档：
+
+1). 首先自动上线，需要模型开发按照已经约定的 predict_proba 统一入口规则提交模型文件:
+    0.启动模型:  python __main__.py --debug
+    1.查询模型： curl "http://127.0.0.1:8888/finup”
+    2.新加模型： curl -F  'models=@./echo_model.py'  "http://127.0.0.1:8888/sys?op=update"
+    3.升级模型： curl -F  'models=@./echo_model.py'  "http://127.0.0.1:8888/sys?op=update"
+       升级和新加模型一样的， 假如已经有模型就更新已有的； 否则就新加；
+    4. 调用特定模型(一个或多个)：
+      curl  "http://127.0.0.1:8888/finup?model=getui_yingxiao_mingxi_2018060613,echo_model" --data   "$(  cat ./data/test.getui_yingxiao_mingxi_2018060613.json )"
+      curl   -F  'files=@./data/test.getui_yingxiao_mingxi_2018060613.csv' "http://127.0.0.1:8888/finup?model=getui_yingxiao_mingxi_2018060613,echo_model&format=pd" > ret__1000000_CSV2.csv
+    5. 批量新加 / 升级 模型: python __main__.py —reload   (新加载 models 目录里全部的模型)
+
+
+2). 模型对外发版:
+    1. python setup.py
+       会在源码目录上一层生成打包好的 PY源码冻结包版本，C源码冻结包版本 ， 发布包版本:
+      例如:
+                     PY源码发版包:  finup_model__20180606160434__src 
+                 PY源码发版压缩包:  finup_model__20180606160434__cd85293d9bd3f7738285252a849e5242.tar.gz 
+                      C源码发版包:  finup_model__20180606160434  ## 可以在自动打包好，本地服务器运行一遍测试
+                  C部署发版压缩包:  finup_model__20180606160434__cd85293d9bd3f7738285252a849e5242__03c47f0b62c351735a2044b5c6288687.tar.gz
+
+       注意:
+              PY源码发版包：是用来在本机进行实时验证调试版本；验证好了，可以删除；
+               C对外发版包：在本机/测试机进行验证打包和冒烟测试；验证好了，可以删除； 
+          PY源码发版压缩包：存档；以供内外查询核对；名字里有压缩包的MD5值;
+           C部署发版压缩包：第一, 用来部署， 例如 个推 / 品友 / ... ；  
+                            第二, 用来存档； 名字里包括源码包发版的MD5校验值，和C源码包的MD5校验值；以供内外查询核对。
+
+3). 模型部署： 可以咨询个推的明辉；
+    1.  python dist.py
+    2. python __main__.py
+
